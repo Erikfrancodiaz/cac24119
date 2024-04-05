@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 4 - HTML - Formularios</title>
+</head>
+<body>
+    <header>
+        <h1>Formularios</h1>
+    </header>
+    <main>
+        <section>
+            <fieldset>
+                <legend>Datos Personales</legend>
+            <!--los formularios para enviar informacion-->
+        
+        <!--si yo no le pongo nada al formulario
+            por defecto viaja por GET-->
+            <form action="./resultado.html">
+                <div>
+    <!--input: varios tipos-->
+                <label for="nombre">Nombre:</label>
+                <input maxlength="10" 
+                    id="nombre" 
+                placeholder="carlos"
+                name="nombre"
+                required>
+                
+                
+                
+                
+            </div>
+            <div>
+                <label for="edad">Edad:</label>
+                <input type="number" min="0" max="120" id="edad">
+                <label for="mes">Meses:</label>
+                <input type="number" 
+                    min="1"
+                    max="11" 
+                    id="mes">
+                <input type="range" 
+                    step="20" 
+                    value="100"
+                    name="rango">
+
+            </div>
+            <div>
+                <label >Fecha de Nacimiento</label>
+                <input type="date" value="2000-01-01">
+
+            </div>
+            <div>
+                <label for="foto">Foto</label>
+                <input type="file">
+            </div>
+            <div>
+                <label for="">Nacionalidad</label>
+                <select name=""nacionalidad 
+                id="nacionalidad">
+                    <option value=""select>Seleccione</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Bolivia">Bolivia</option>
+                </select>
+            </div>
+            <div>
+                <label for="phone">Telefono:</label>
+                <input type="tel"
+                id="phone"
+                name="telefono"
+                placeholder="rj 011-12-456"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+            </div>
+            <div>
+                <label for="">T.C.</label>
+                <span>SI</span>
+                <input type="radio" 
+                name="tc"
+                value="si">
+
+                <span>NO</span>
+                <input type="radio" 
+                name="tc"
+                value="no">
+            </div>
+            <div>
+                <label for="">Turno</label>
+                <div>
+                    <label for="">Mañana</label>
+                    <input type="radio" 
+                        name="turno"
+                        value="manana">
+                    <label for="">Tarde</label>
+                    <input type="radio" 
+                        name="turno"
+                        value="tarde">
+                    <label for="">Noche</label>
+                    <input type="radio" 
+                        name="turno"
+                        value="noche">
+                </div>
+            </div>
+            <div>
+                <button>
+                    Enviar
+                </button>
+                <button type="reset">
+                    Limpiar
+                </button>
+            </div>
+
+
+            </form>
+        </fieldset>
+    </section>
+    <section>
+        <h3>Login</h3>
+        <form method="post">
+            <div>
+                <label for="">Usuario</label>
+                <input type="text" 
+                    name="usuario"
+                    required>
+            </div>    
+            <div>
+                <label for="">Password</label>
+                <input type="password"
+                    name="password"
+                    required>
+            
+            </div>    
+            <button>
+                Login
+
+            </button>
+        </form>
+    </section>
+    </main>
+    
+</body>
+</html>
